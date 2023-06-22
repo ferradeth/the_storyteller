@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@font-face {
+    font-family: 'Fugaz One';
+    src: url("../fonts/FugazOne-Regular.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Bold';
+    src: url("../fonts/FiraSansCondensed-Bold.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Regular';
+    src: url("../fonts/FiraSansCondensed-Regular.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Medium';
+    src: url("../fonts/FiraSansCondensed-Medium.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Light';
+    src: url("../fonts/FiraSansCondensed-Light.ttf");
+}
+
+main{
+    background-color: #e0e1ec;
+    padding: 20px;
+    margin-left: 200px;
+    /*width: 100%;*/
+}
+
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #7645C7;
+}
+nav a{
+    color: white;
+    font-family: FiraSansCondensed-Bold;
+    text-decoration: none;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btn-adm{
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.grid-row{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    /*border-bottom: 1px solid grey;*/
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.head{
+    background-color: #2d3748;
+    color: white;
+    font-family: FiraSansCondensed-Bold;
+}
+.btn{
+    height: 40px;
+    width: fit-content;
+    border: 0;
+    font-family: FiraSansCondensed-Bold;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+h1{
+    font-family: FiraSansCondensed-Bold;
+    margin-bottom: 10px;
+}
+.empty{
+    margin: 10px;
+    font-size: 35px;
+    font-family: "FiraSansCondensed-Bold";
+    color: grey;
+}
+
+
+/* СТИЛИ СТРАНИЦЫ ИГР */
+.ban{
+    background-color: red;
+}
+/* КОНЕЦ СТИЛЕЙ ИГР */
+
+/* СТИЛИ ВХОДА */
+.login-form{
+    font-family: FiraSansCondensed-Bold;
+    background-color: #cbd5e0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-control{
+    border: 2px solid #B296DF;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+.btn-signup{
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+/* КОНЕЦ СТИЛЕЙ ВХОДА */
+
+
+/* МОДАЛЬНОЕ ОКНО */
+
+.modal-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.53);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-window{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.modal-window>form, #formCont{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.close{
+    padding: 5px 10px;
+}
+#closeBtn{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+/* КОНЕЦ МОДАЛЬНОГО ОКНА */
+
+/* СТИЛИ ДЛЯ ПОДТВЕРЖДЕНИЯ */
+
+.confirm, .cancel, .view{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.cancel{
+    background-color: red;
+}
+.view{
+    border: 1px black solid;
+    color: black;
+    background-color: white;
+}
+
+.checking{
+    width: 250px;
+    height: fit-content;
+}
+
+.container-img{
+    width: 200px;
+
+}
+
+/* КОНЕЦ СТИЛЕЙ ПОДТВЕРЖДЕНИЯ */
+
+/*СТИЛИ ДЛЯ СТРАНИЦЫ ИГРЫ*/
+.main-game-info{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    gap: 20px;
+}
+.main-game-img{
+    min-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.main-game-chars{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title-row, .addition-inf, .like, .title-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#statusSelect{
+    margin-left: 10px;
+    cursor: pointer;
+    border: 0 !important;
+    background: #7645C7 !important;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: FiraSansCondensed-Regular;
+}
+#statusSelect:focus-visible{
+    outline: none !important;
+}
+.status-trigger{
+    padding: 5px !important;
+    border-bottom: 1px white solid !important;
+}
+.fav{
+    height: 30px;
+    margin-left: 5px;
+}
+.like img{
+    margin-left: 5px;
+    height: 28px;
+    color: black;
+}
+.main-game-title{
+    font-family: FiraSansCondensed-Bold;
+    font-size: 36px;
+}
+.game-link{
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #7645C7;
+    color: white;
+    font-family: FiraSansCondensed-Bold;
+    width: fit-content;
+    border: 0;
+}
+.show-h{
+    font-family: FiraSansCondensed-Bold;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.screens-cont{
+    display: flex;
+    flex-direction: column;
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 200px;*/
+    /*max-height: 600px;*/
+}
+.slider{
+    /*max-height: 600px;*/
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: 200px;
+    gap: 10px;
+}
+.slider-elem{
+    /*border: 1px solid #7645C7;*/
+    cursor: pointer;
+}
+.slider-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#main-screen{
+    height: 600px;
+    max-width: 1200px;
+    width: 100%;
+    object-fit: cover;
+}

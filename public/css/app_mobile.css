@@ -1,0 +1,1080 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hide{
+    display: none !important;
+}
+
+.active-menu{
+    visibility: visible;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: 'FiraSansCondensed-Regular';
+    background-color: #F9F6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+body nav, main, footer{
+    padding: 0 20px 0 20px;
+}
+.alert{
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.alert-danger{
+    border: 2px red solid;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.alert-success{
+    border: 2px green solid;
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+@font-face {
+    font-family: 'Fugaz One';
+    src: url("../fonts/FugazOne-Regular.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Bold';
+    src: url("../fonts/FiraSansCondensed-Bold.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Regular';
+    src: url("../fonts/FiraSansCondensed-Regular.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Medium';
+    src: url("../fonts/FiraSansCondensed-Medium.ttf");
+}
+@font-face {
+    font-family: 'FiraSansCondensed-Light';
+    src: url("../fonts/FiraSansCondensed-Light.ttf");
+}
+
+/* СТИЛИ ДЛЯ ШАПКИ */
+nav{
+    min-height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 450px;
+    z-index: 100000;
+    background-color: #B296DF;
+    /*margin-bottom: 80px;*/
+}
+
+nav, .col, footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col button{
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+
+.menu{
+    transition: all 0.5s;
+    background-color: #B296DF;
+    position: absolute;
+    top: 96px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menu a{
+    color: black;
+    margin-bottom: 7px;
+}
+.menu a:hover{
+    color: white;
+}
+
+.notify-menu{
+    width: 250px;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 98px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 3px 5px 2px rgba(128, 128, 128, 0.37);
+}
+
+.notify{
+    width: 100%;
+    font-size: 12px;
+    /*border-bottom: 1px grey solid;*/
+    border-top: 1px grey solid;
+    padding: 10px;
+}
+
+.notify-menu h3{
+    margin: 10px;
+    color: #7645C7;
+}
+
+#logo{
+    font-family: 'Fugaz One';
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.search{
+
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+.search input{
+    max-width: 120px;
+    border: 0;
+    background: none;
+    padding-left: 5px;
+}
+#search{
+    height: 20px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+#search img, #notifications img{
+    width: 20px;
+    height: 20px;
+}
+
+#notifications{
+    /*margin-left: 15px;*/
+    margin-left: 0px;
+}
+
+.nav-link, .menu-link{
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'FiraSansCondensed-Bold';
+}
+
+.nav-link:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.2s;
+}
+
+.signup, .subs, .all{
+    font-size: 16px;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'FiraSansCondensed-Bold';
+    color: #7645C7;
+}
+.signup, .register{
+    margin-left: 15px;
+}
+.register{
+    background-color: #7645C7;
+    color: white;
+}
+
+.active{
+    background-color: #7645C7 !important;
+    color: white !important;
+}
+
+.right button{
+    /*margin-left: 20px;*/
+    margin-left: 0px;
+}
+
+#profile, #profile img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.pages{
+    font-family: FiraSansCondensed-Bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    /*margin-left: 10px;*/
+    margin-left: 0px;
+}
+.left.col{
+    width: 100%;
+    justify-content: space-around;
+}
+.right.col{
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+/* КОНЕЦ СТИЛЕЙ ДЛЯ ШАПКИ */
+
+
+
+/* СТИЛИ КОНТЕНТА */
+main{
+    margin-top: 85px;
+}
+.main-page{
+    /*margin-top: 80px;*/
+    padding-top: 25px;
+    display: block;
+    /*display: grid;*/
+    /*grid-template-columns: 3fr 1fr;*/
+    /*gap: 50px;*/
+}
+
+.header{
+    width: 100%;
+    background-color: #96B4C5;
+    color: white;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 10px 10px 0 0;
+    font-family: 'FiraSansCondensed-Bold';
+}
+
+.update-head{
+    background-color: #B296DF;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+
+}
+.update-head p{
+    font-size: 20px;
+    color: white;
+    font-family: 'FiraSansCondensed-Bold';
+}
+.tags{
+    /*border-radius: 10px;*/
+    /*padding-bottom: 5px;*/
+    /*box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.25);*/
+}
+
+.tags-name{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.popular-games{
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+.pop-game{
+    position: relative;
+    height: 100px;
+}
+/*.pop-game img{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+.pop-game-title{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding-right: 5px;
+    font-family: FiraSansCondensed-Bold;
+    font-size: 10px;
+    color: white;
+}
+
+.filt-updates button{
+    margin-left: 5px;
+}
+.tags-cont{
+    display: none;
+}
+
+.top-authors{
+    display: none;
+    /*border-radius: 10px;*/
+    /*padding-bottom: 5px;*/
+    /*box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.25);*/
+    /*margin-bottom: 15px;*/
+}
+.author-top{
+    display: grid;
+    grid-template-columns: 20px 3.5fr 1fr;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #B3B3B3;
+}
+.authors{
+    margin-bottom: 15px;
+}
+.user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    font-size: 12px;
+}
+.user-info img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+.user-info a{
+    text-decoration: none;
+    color: black;
+}
+.top-number, .followers{
+    font-size: 16px;
+    font-family: "FiraSansCondensed-Bold";
+}
+/* КОНЕЦ СТИЛЕЙ КОНТЕНТА */
+
+/* СТИЛИ ФУТЕРА */
+footer{
+    padding: 15px 20px !important;
+    margin-top: 50px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #96B4C5;
+    padding-top: 25px;
+}
+.footer-menu{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-menu a:hover{
+    color: #7645C7;
+}
+.menu-docs{
+    display: flex;
+    flex-direction: column;
+}
+.menu-docs a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.copyright{
+    font-size: 14px;
+    font-family: 'FiraSansCondensed-Light';
+}
+.site-info{
+    font-size: 10px;
+    width: 220px;
+    text-align: right;
+}
+
+/* КОНЕЦ СТИЛЕЙ ФУТЕРА */
+
+
+/* СТИЛИ СТРАНИЦЫ РЕГИСТРАЦИИ */
+
+.media-reg{
+    margin-top: 100px;
+}
+.reg{
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 20px 5px #a4a4a4;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px #B296DF solid;
+    height: 40px;
+    background: none;
+    margin: 5px 0;
+}
+.reg button{
+    width: 100%;
+    margin: 10px 0;
+}
+input:focus-visible, input:focus{
+    outline: none;
+}
+
+.reg>label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.rules, #rules{
+    max-height: 25px !important;
+    margin: 0 5px;
+    width: fit-content !important;
+}
+.btn{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'FiraSansCondensed-Regular';
+    font-size: 16px;
+    border: 0;
+    color: black;
+}
+.btn:disabled{
+    background-color: grey;
+}
+.is-invalid{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+/* КОНЕЦ СТИЛЕЙ СТРАНИЦЫ РЕГИСТРАЦИИ */
+
+/* СТИЛИ ПРОФИЛЯ */
+.main-profile{
+    margin-top: 120px;
+}
+.profile-cont{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile-info{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.profile-info>p{
+    font-size: 14px;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+}
+.left img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.profile-control{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-control .btn{
+    padding: 5px 10px;
+    margin-left: 0px;
+}
+
+.edit{
+    background-color: #96B4C5;
+}
+.exit{
+    background-color: black;
+    color: white;
+}
+
+.modal-wrapper{
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.53);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-window{
+    position: relative;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.modal-window>form{
+    display: flex;
+    flex-direction: column;
+}
+.modal-info{
+    font-family: FiraSansCondensed-Light;
+    font-size: 12px;
+    text-align: center;
+}
+#closeBtn{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+.sub-label{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 20px;
+}
+.modal-window form label{
+    background-color: #96B4C5;
+    color: white;
+    font-family: FiraSansCondensed-Bold;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.active-label{
+    background-color: #7645C7;
+}
+.sub{
+    background-color: #7645C7;
+    color: white;
+}
+.sub:hover{
+    background-color: black;
+    color:  #7645C7
+}
+
+.profile-games{
+    margin-top: 20px;
+    display: block;
+    /*display: grid;*/
+    /*grid-template-columns: 200px 1fr;*/
+    /*gap: 20px;*/
+}
+.profile-games>.filter{
+    display: none;
+}
+
+.tabs{
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.tab-header__item{
+    min-height: 45px;
+    border: 2px #B296DF solid;
+    padding: 2px 10px 2px 7px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.tab-header__item.active{
+    background-color: #96B4C5 !important;
+    border: 2px #96B4C5 solid;
+}
+.empty{
+    margin: 10px;
+    font-size: 35px;
+    font-family: "FiraSansCondensed-Bold";
+    color: grey;
+}
+.filter div{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.filter label{
+    padding-bottom: 5px;
+}
+.filter .btn{
+    /*width: 100%;*/
+    padding: 10px 20px;
+    color: white;
+    background-color: #7645C7;
+    /*border: 1px grey solid;*/
+    font-family: FiraSansCondensed-Bold;
+}
+.filt-head{
+    font-family: "FiraSansCondensed-Light";
+    margin-bottom: 15px;
+}
+#gamesCont {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(2, 1fr);*/
+    /*gap: 20px;*/
+}
+.tab-a{
+    text-decoration: none;
+    color: black;
+}
+/* КОНЕЦ СТИЛЕЙ ПРОФИЛЯ */
+
+/* СТИЛИ ФОРМЫ НА СОЗДАНИЕ */
+.media-reg> h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.form-group{
+    /*display: grid;*/
+    /*grid-template-columns: 70px 1fr;*/
+    /*gap: 20px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+#cover-load{
+    grid-template-columns: 300px 1fr 1fr;
+}
+.form-group>label{
+    text-align: left;
+}
+.form-group input,textarea{
+    width: 100%;
+    border: 2px solid #B296DF;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 5px;
+}
+
+.form-group>.btn{
+    width: 100%;
+}
+
+#cover-label, #screen-label{
+    width: 100%;
+    border: 2px grey dashed;
+    text-align: center;
+    min-height: 70px;
+    max-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.label-desc{
+    color: grey;
+}
+
+.confirm{
+    padding: 10px 70px;
+    background-color: #7645C7;
+    color: white;
+    font-family: FiraSansCondensed-Bold;
+    font-size: 25px;
+}
+.disable{
+    background-color: grey;
+    color: lightgray;
+    pointer-events: none;
+}
+
+.select-choices{
+    background-color: white;
+    border-top: 0;
+    border-left: 2px solid #B296DF;
+    border-right: 2px solid #B296DF;
+    border-bottom: 2px solid #B296DF;
+    border-radius: 0 0 5px 5px;
+}
+.choice-item{
+    border-bottom: 1px grey solid;
+    padding: 10px;
+    cursor: pointer;
+}
+.choice-item:hover{
+    background-color:  #B296DF;
+}
+#select-tags{
+    width: 100%;
+}
+.select-input input{
+     width: 100%;
+     border: 0;
+     border-radius: 0;
+     background: none;
+ }
+.select-input{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid #B296DF;
+    border-radius: 5px;
+    /*height: 40px;*/
+    padding-left: 5px;
+}
+.selected-choice{
+    background-color: #B296DF;
+    position: relative;
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px 12px 5px 5px;
+}
+.access-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.access-inputs label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.access{
+    margin-right: 5px;
+    width: 20px !important;
+    height: 20px !important;
+}
+.del-btn{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    cursor: pointer;
+}
+#screens-cont{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 15px;
+}
+.screens{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.screenItem{
+    position: relative;
+}
+.screenDel{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 25px;
+    text-align: center;
+    width: 25px;
+    height: 27px;
+    border-radius: 5px;
+    color: red;
+    background-color: rgba(255, 255, 255, 0.79);
+    z-index: 10000;
+}
+/* КОНЕЦ СТИЛИ ФОРМЫ НА СОЗДАНИЕ */
+
+/* СТИЛИ КАРТОЧЕК */
+
+.card{
+    display: grid;
+    font-size: 12px;
+    grid-template-columns: 63px 1fr;
+    gap: 10px;
+    height: 100px;
+    margin: 15px 0;
+    padding: 0;
+    position: relative;
+}
+.profile-card{
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 63px 1fr;
+    gap: 20px;
+    height: 100px;
+    position: relative;
+}
+.profile-card>img{
+    height: 100px;
+}
+.profile-likes{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profile-likes img{
+    height: 20px;
+    margin-right: 5px;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.btns *{
+    font-size: 10px;
+    margin-right: 10px;
+}
+.card-img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.likes{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 70px;
+    height: 18px;
+    background-color: #96B4C4;
+    color: black;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.likes>img{
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+.likes:hover{
+    background-color: #B296DF;
+    transition: all .5s;
+}
+.game-title{
+    display: block;
+    padding-right: 80px;
+    font-family: FiraSansCondensed-Bold;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.card-body{
+    font-family: FiraSansCondensed-Light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.game-author{
+    text-decoration: none;
+    color: black;
+}
+/* КОНЕЦ СТИЛЕЙ КАРТОЧЕК */
+
+/*СТИЛИ ДЛЯ СТРАНИЦЫ ИГРЫ*/
+
+.main-game-info{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+}
+.main-game-img{
+    min-height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+.main-game-chars{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title-row, .addition-inf, .like{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+.title-left{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+#statusSelect{
+    margin-left:0;
+    cursor: pointer;
+    border: 0 !important;
+    background: #7645C7 !important;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: FiraSansCondensed-Regular;
+}
+#statusSelect:focus-visible{
+    outline: none !important;
+}
+.status-trigger{
+    padding: 5px !important;
+    border-bottom: 1px white solid !important;
+}
+.fav{
+    height: 30px;
+    margin-left: 5px;
+}
+.like img{
+    margin-left: 5px;
+    height: 20px;
+    color: black;
+}
+.main-game-title{
+    font-family: FiraSansCondensed-Bold;
+    font-size: 20px;
+}
+.game-link{
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #7645C7;
+    color: white;
+    font-family: FiraSansCondensed-Bold;
+    width: fit-content;
+    border: 0;
+}
+.show-h{
+    font-family: FiraSansCondensed-Bold;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.screens-cont{
+    display: flex;
+    flex-direction: column;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+}
+.slider-elem{
+    cursor: pointer;
+}
+.slider-img{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+#main-screen{
+    height: 600px;
+    max-width: 1200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.comment-cont{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.comment-item{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.comment-img{
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+}
+
+.comment-author{
+    font-family: FiraSansCondensed-Bold;
+}
+.ban{
+    cursor: pointer;
+    height: 25px;
+    font-size: 12px;
+    color: red;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.like{
+    cursor: pointer;
+}
+/*КОНЕЦ СТИЛЕЙ*/
+
+/* СТИЛИ КАТАЛОГА */
+.catalog{
+    display: flex;
+    flex-direction: column;
+    /*display: grid;*/
+    /*grid-template-columns: 200px 1fr;*/
+    /*gap: 20px;*/
+}
+/* КОНЕЦ СТИЛЕЙ КАТАЛОГА */
+
+/* СТИЛИ СТРАНИЦЫ О НАС */
+
+.about-cont h1{
+    font-size: 40px;
+    margin-bottom: 0.5em;
+}
+.about-cont h2{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+.separate{
+    margin: 20px;
+}
+.about-cont ol>li{
+    margin-left: 25px;
+    margin-top: 0.5em;
+}
+
+/* КОНЕЦ СТИЛЕЙ О НАС */

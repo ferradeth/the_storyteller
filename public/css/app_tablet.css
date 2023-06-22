@@ -1,0 +1,142 @@
+body main, footer{
+    padding: 0 10% 0 10%;
+}
+nav{
+    padding: 10px 10% 10px 10% !important; 
+    max-width: 820px;
+}
+main{
+    margin-top: 70px;
+}
+.search input{
+    width: 100px;
+    border: 0;
+    background: none;
+    padding-left: 5px;
+}
+.menu{
+    right: 82px;
+    top: 60px;
+}
+.notify-menu{
+    right: 140px;
+    top: 60px;
+}
+#logo{
+    font-size: 20px;
+}
+.search{
+    width: 120px;
+}
+/*главная страница*/
+.update-head p{
+    font-size: 25px;
+}
+.popular-games{
+    height: 140px;
+}
+.pop-game{
+    height: 120px;
+}
+.pop-game-title{
+    font-size: 12px;
+    bottom: 10px;
+    left: 5px;
+    right: 5px;
+}
+/*карточки игр*/
+.likes{
+    width: fit-content;
+    padding: 0 10px;
+}
+.game-title{
+    display: block;
+    padding-right: 50px;
+    margin-bottom: 0;
+}
+.card{
+    height: fit-content;
+}
+/*топ авторов*/
+.author-top{
+    grid-template-columns: 20px 3.5fr 1fr;
+}
+.user-info{
+    font-size: 10px;
+    height: 35px;
+}
+.user-info img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+/*формы авторизации и регистрации*/
+.reg{
+    width: 60%;
+}
+/*профиль пользователя*/
+.profile-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.profile-control .btn{
+    padding: 5px 30px;
+    margin-left: 0;
+    text-align: center;
+}
+.tabs{
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.tab-header__item{
+    min-height: 45px;
+    border: 2px #B296DF solid;
+    padding: 2px 10px 2px 7px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#gamesCont {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+/*старница игры*/
+.title-left{
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.slider{
+    /*max-height: 600px;*/
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: 200px;
+    gap: 10px;
+}
+#statusSelect{
+    margin: 0;
+}
+.main-game-title{
+    font-size: 26px;
+}
+.game-link{
+    padding: 15px;
+    font-size: 16px;
+}
+/*страница редактирования*/
+.form-group{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    font-size: 20px;
+    margin: 15px;
+}
+#cover-load{
+    grid-template-columns: 150px 1fr 1fr;
+}
